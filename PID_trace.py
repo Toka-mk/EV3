@@ -1,14 +1,16 @@
 # WIP
 
-from ev3dev.ev3 import ColorSensor
-import time
+from ev3dev.ev3 import ColorSensor, Button
+from time import time
 import move
 
 
 cs = ColorSensor('in1')
 cs.mode = 'COL-REFLECT'
-t0 = time.time()
+t0 = time()
+btn = Button()
 
+direction = 1
 speed = 150
 dt = 500
 stop_action = "coast"
@@ -25,7 +27,8 @@ def main():
 
 	target = cs.value()
 
-	while time.time()-t0 < 15:
+	while time()-t0 < 30:
+		if btn.any(): break
 
 		error = target - cs.value()
 		# noinspection PyRedundantParentheses,SyntaxError

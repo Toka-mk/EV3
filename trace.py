@@ -1,15 +1,15 @@
 from ev3dev.ev3 import ColorSensor
 import move
-import time
+from time import time
 
 threshold = 5
 cs = ColorSensor('in1')
 cs.mode = 'COL-COLOR'
-t0 = time.time()
+t0 = time()
 
 
 def main():
-	while time.time()-t0 < 15:
+	while time()-t0 < 15:
 		if cs.value() > threshold:
 			move.left(.1, ratio=-.5)
 		else:

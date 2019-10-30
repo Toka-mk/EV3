@@ -6,7 +6,7 @@ ts = TouchSensor('in1')
 
 
 def main():
-	move.forward()
+	move.straight()
 	while 1:
 		if ts.value():
 			move.halt()

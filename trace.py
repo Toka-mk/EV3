@@ -11,9 +11,9 @@ t0 = time.time()
 def main():
 	while time.time()-t0 < 15:
 		if cs.value() > threshold:
-			move.left(.1, ratio=-2)
+			move.left(.1, ratio=-.5)
 		else:
-			move.right(.1, ratio=-2)
+			move.right(.1, ratio=-.5)
 
 
 main()

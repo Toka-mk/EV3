@@ -32,7 +32,7 @@ def main():
 
 		error = target - cs.value()
 		# noinspection PyRedundantParentheses,SyntaxError
-		integral += (error *= dt)
+		# integral += (error *= dt)
 		derivative = (error - prev_error) / dt
 
 		h = (kp * error) + (ki * integral) + (kd * derivative)

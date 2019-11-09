@@ -5,7 +5,7 @@
       <paths name="Brick">
         <serverdata>
           <mappings>
-            <mapping deploy="/home/robot/EV3_Xiao" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/home/robot/EV3_6" local="$PROJECT_DIR$" web="/" />
           </mappings>
           <excludedPaths>
             <excludedPath local="true" path="$PROJECT_DIR$/venv" />

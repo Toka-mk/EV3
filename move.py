@@ -1,11 +1,13 @@
-from ev3dev.ev3 import LargeMotor
+from ev3dev.ev3 import LargeMotor, Button
 from time import sleep
 
 lm = LargeMotor('outA')
 rm = LargeMotor('outB')
+btn = Button()
+sa = 'brake'
 
 
-def halt(stop_action='brake'):  # stop both motors
+def halt(stop_action=sa):  # stop both motors
 	lm.stop(stop_action=stop_action)
 	rm.stop(stop_action=stop_action)
 

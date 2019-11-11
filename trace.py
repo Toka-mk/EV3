@@ -2,7 +2,7 @@ from ev3dev.ev3 import ColorSensor
 import move
 from time import time
 
-threshold = 5
+threshold = 10
 cs = ColorSensor('in1')
 cs.mode = 'COL-COLOR'
 t0 = time()
